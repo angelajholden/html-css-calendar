@@ -8,7 +8,7 @@ I had a project recently where my client wanted a calendar for their site, but d
 
 Let's start with a <code class="language-markup">&lt;ul></code> list for the days of the week.
 
-```markup
+``` markup
 <pre><code class="language-markup">
 	<ul class="days-of-week clearfix">
 		<li>Sunday</li>
