@@ -9,24 +9,21 @@ I had a project recently where my client wanted a calendar for their site, but d
 Let's start with a <code class="language-markup">&lt;ul></code> list for the days of the week.
 
 ```markup
-<pre><code class="language-markup">
-	&lt;ul class="days-of-week clearfix">
-		&lt;li>Sunday&lt;/li>
-		&lt;li>Monday&lt;/li>
-		&lt;li>Tuesday&lt;/li>
-		&lt;li>Wednesday&lt;/li>
-		&lt;li>Thursday&lt;/li>
-		&lt;li>Friday&lt;/li>
-		&lt;li>Saturday&lt;/li>
-	&lt;/ul>
-</code></pre>
+	<ul class="days-of-week clearfix">
+		<li>Sunday</li>
+		<li>Monday</li>
+		<li>Tuesday</li>
+		<li>Wednesday</li>
+		<li>Thursday</li>
+		<li>Friday</li>
+		<li>Saturday</li>
+	</ul>
 ```
 
 Next we need a second <code class="language-markup">&lt;ul></code> list with 35 <code class="language-markup">&lt;li></code>s. Our calendar needs five rows, each with seven days to represent each day of the month.
 
 Each <code class="language-markup">&lt;li></code> has a <code class="language-markup">&lt;span></code> for the date. Beneath the date, I added an event.
 
-```markup
 <pre><code class="language-markup">
 	&lt;ul class="days-of-month clearfix">
 		&lt;!-- Week One -->
@@ -148,11 +145,9 @@ Each <code class="language-markup">&lt;li></code> has a <code class="language-ma
 		&lt;/li>
 	&lt;/ul>
 </code></pre>
-```
 
 Next we need CSS to style the lists and make them into a responsive calendar. Let's start with the days of the week and CSS that will apply to both lists.
 
-```markup
 <pre><code class="language-css">
 	html { /* It's a good idea to have box-sizing: border-box on every element */
 	  box-sizing: border-box;
@@ -198,11 +193,9 @@ Next we need CSS to style the lists and make them into a responsive calendar. Le
 	  border-right: 1px solid #fff;
 	}
 </code></pre>
-```
 
 Next let's style the remaining 35 calendar days and get them lined up beneath their respective days.
 
-```markup
 <pre><code class="language-css">
 	.days-of-month li {
 	  position: relative; /* We need this to position the spans and dates */
@@ -231,11 +224,9 @@ Next let's style the remaining 35 calendar days and get them lined up beneath th
 	  font-size: 0.8em;
 	}
 </code></pre>
-```
 
 And finally, let's write some media queries and make this responsive. I'm using 960px as a breakpoint so the calendar will be seen as a grid on an iPad in landscape, and responsive in portrait view.
 
-```markup
 <pre><code class="language-css">
 	@media only screen and (max-width: 960px) {
 	  .days-of-week {
@@ -269,4 +260,3 @@ And finally, let's write some media queries and make this responsive. I'm using 
 	  }
 	}
 </code></pre>
-```
