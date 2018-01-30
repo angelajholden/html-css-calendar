@@ -1,4 +1,4 @@
-#Build a Calendar with HTML &amp; CSS
+# Build a Calendar with HTML &amp; CSS
 
 This is a simple, responsive calendar made with HTML and CSS.
 
