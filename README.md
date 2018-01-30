@@ -9,6 +9,7 @@ I had a project recently where my client wanted a calendar for their site, but d
 Let's start with a <code class="language-markup">&lt;ul></code> list for the days of the week.
 
 ```markup
+<pre><code class="language-markup">
 	<ul class="days-of-week clearfix">
 		<li>Sunday</li>
 		<li>Monday</li>
@@ -18,6 +19,7 @@ Let's start with a <code class="language-markup">&lt;ul></code> list for the day
 		<li>Friday</li>
 		<li>Saturday</li>
 	</ul>
+</code></pre>
 ```
 
 Next we need a second <code class="language-markup">&lt;ul></code> list with 35 <code class="language-markup">&lt;li></code>s. Our calendar needs five rows, each with seven days to represent each day of the month.
