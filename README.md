@@ -2,4 +2,4 @@
 
 This is a simple, responsive calendar made with HTML and CSS.
 
-[Read the Article](https://angelajholden.com/demo/html-css-calendar)
+[Read the Article](https://angelajholden.com/build-a-calendar-with-html-css)
