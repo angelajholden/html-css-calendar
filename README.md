@@ -58,7 +58,7 @@ Each <code>&lt;li></code> has a <code>&lt;span></code> for the date. Next to the
   <li><span>17</span></li>
   <!-- Week Four -->
   <li><span>18</span></li>
-  <li><span>19</span>President's Day</li>
+  <li><span>19</span>Presidents' Day</li>
   <li><span>20</span></li>
   <li><span>21</span></li>
   <li><span>22</span></li>
