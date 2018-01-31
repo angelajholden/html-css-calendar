@@ -26,7 +26,7 @@ Let's start with a <code>&lt;ul></code> for the days of the week.
 
 Next we need a second <code>&lt;ul></code> with 35 <code>&lt;li></code>s. Our calendar needs five rows, each with seven days to represent each day of the month.
 
-Each <code>&lt;li></code> has a <code>&lt;span></code> for the date. Beneath the date, I added an event.
+Each <code>&lt;li></code> has a <code>&lt;span></code> for the date. Next to the date, I added an event.
 
 ## Our Calendar is February 2018
 
