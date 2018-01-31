@@ -8,9 +8,9 @@ This is a simple, responsive calendar made with HTML and CSS.
 
 <hr />
 
-I had a project recently where my client wanted a calendar for their site, but didn't want to embed a Google Calendar. They wanted a month at a time view, and wanted to update just a few dates each month. What follows is a simple calendar made with two <code>&lt;ul></code> lists and some CSS. And of course it's responsive.
+I had a project recently where my client wanted a calendar for their site, but didn't want to embed a Google Calendar. They wanted a month at a time view, and wanted to update just a few dates each month. What follows is a simple calendar made with two <code>&lt;ul></code>s and some CSS. And of course it's responsive.
 
-Let's start with a <code>&lt;ul></code> list for the days of the week.
+Let's start with a <code>&lt;ul></code> for the days of the week.
 
 ```html
 <ul class="days-of-week clearfix">
@@ -24,11 +24,11 @@ Let's start with a <code>&lt;ul></code> list for the days of the week.
 </ul>
 ```
 
-Next we need a second <code>&lt;ul></code> list with 35 <code>&lt;li></code>s. Our calendar needs five rows, each with seven days to represent each day of the month.
+Next we need a second <code>&lt;ul></code> with 35 <code>&lt;li></code>s. Our calendar needs five rows, each with seven days to represent each day of the month.
 
 Each <code>&lt;li></code> has a <code>&lt;span></code> for the date. Beneath the date, I added an event.
 
-## This Calendar is February 2018
+## Our Calendar is February 2018
 
 ```html
 <ul class="days-of-month clearfix">
