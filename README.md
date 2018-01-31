@@ -157,7 +157,11 @@ Next let's style the remaining 35 calendar days and get them lined up beneath th
 And finally, let's write some media queries and make this responsive. I'm using 960px as a breakpoint so the calendar will be seen as a grid on an iPad in landscape, and responsive in portrait view.
 
 ```css
-@media only screen and (max-width: 960px) {
+@media (max-width: 960px) {
+  .wrap {
+    padding: 25px;
+  }
+
   .days-of-week {
     position: absolute;
     top: -9999px;
@@ -165,13 +169,20 @@ And finally, let's write some media queries and make this responsive. I'm using 
   }
 
   .days-of-month li {
-    padding: 25px;
+    display: block;
     height: auto;
     width: 100%;
+    padding: 0;
+    text-align: left;
     float: none;
     border-top: none;
     border-left: none;
     border-right: none;
+  }
+
+  .days-of-month li:empty {
+    /* hide the empty days = li without a span */
+    display: none;
   }
 
   .days-of-month li:nth-of-type(1) {
@@ -184,8 +195,10 @@ And finally, let's write some media queries and make this responsive. I'm using 
   }
   
   .days-of-month li span {
-    top: 50%;
-    transform: translateY(-50%);
+    position: static;
+    display: inline-block;
+    padding: 15px;
+    margin-right: 15px;
   }
 }
 ```

@@ -1,20 +1,12 @@
-// Colors
-$white: #fff;
-$green: #16a085;
-
-// Typography
-$poppins: 'Poppins', sans-serif;
-
+@import "mixins";
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 body {
 	background-color: $green;
 	font-family: $poppins;
@@ -25,19 +17,16 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
 .wrap {
 	max-width: 1050px;
 	margin: 0 auto;
 	padding: 100px 25px;
 }
-
-.clearfix:after {
+.clearfix:after { /* We need this to clear our floats */
 	content: "";
 	display: table;
 	clear: both;
 }
-
 a {
 	color: $white;
 	text-decoration: none;
@@ -48,7 +37,6 @@ a {
 		opacity: 0.85;
 	}
 }
-
 .link {
 	position: absolute;
 	top: 10px;
@@ -61,17 +49,14 @@ a {
 		margin-right: 5px;
 	}
 }
-
 h1 {
 	font-size: 3em;
 	font-weight: 300;
 }
-
 h2 {
 	font-size: 2.5em;
 	font-weight: 300;
 }
-
 ul {
 	margin: 0;
 	padding: 0;
@@ -82,7 +67,6 @@ ul {
 		float: left;
 	}
 }
-
 .days-of-week {
 	li {
 		text-align: center;
@@ -100,12 +84,11 @@ ul {
 		}
 	}
 }
-
 .days-of-month {
 	li {
-		position: relative;
+		position: relative; /* We need this to position the spans and dates */
 		padding: 25px 10px;
-		height: 125px;
+		height: 125px; /* Each day has a fixed height */
 		text-align: center;
 		border-top: none;
 		border-right: 1px solid $white;
@@ -113,7 +96,7 @@ ul {
 		&:nth-of-type(1) {
 			border-left: 1px solid $white;
 		}
-		&:nth-of-type(7n+8) {
+		&:nth-of-type(7n+8) { /* Clear the first day of each row */
 			border-left: 1px solid $white;
 			clear: both;
 		}
@@ -125,8 +108,7 @@ ul {
 		}
 	}
 }
-
-@media (max-width: 960px) {
+@media only screen and (max-width: 960px) {
 	.wrap {
 		padding: 25px;
 	}
@@ -137,13 +119,18 @@ ul {
 	}
 	.days-of-month {
 		li {
-			padding: 25px;
+			display: block;
 			height: auto;
 			width: 100%;
+			padding: 0;
+			text-align: left;
 			float: none;
 			border-top: none;
 			border-left: none;
 			border-right: none;
+			&:empty { /* hide the empty days = li without a span */
+				display: none;
+			}
 			&:nth-of-type(1) {
 				border-left: none;
 			}
@@ -152,8 +139,10 @@ ul {
 				clear: both;
 			}
 			span {
-				top: 50%;
-				transform: translateY(-50%);
+				position: static;
+				display: inline-block;
+				padding: 15px;
+				margin-right: 15px;
 			}
 		}
 	}
