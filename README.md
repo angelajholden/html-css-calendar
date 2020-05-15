@@ -2,10 +2,6 @@
 
 This is a simple, responsive calendar made with HTML and CSS.
 
-[Read the Article](https://angelajholden.com/build-a-calendar-with-html-css)
-
-[See the Calendar](https://angelajholden.com/demo/html-css-calendar/)
-
 <hr />
 
 I had a project recently where my client wanted a calendar for their site, but didn't want to embed a Google Calendar. They wanted a month at a time view, and wanted to update just a few dates each month. What follows is a simple calendar made with two <code>&lt;ul></code>s and some CSS. And of course it's responsive.
