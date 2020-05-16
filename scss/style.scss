@@ -49,8 +49,7 @@ ul {
 		display: block;
 		width: 14.285714%;
 
-		&::before {
-			/* https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type | Accessibility concerns */
+		&::before { /* https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type | Accessibility concerns */
 		  content: "\200B";
 		}
 	}
