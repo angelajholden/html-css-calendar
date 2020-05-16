@@ -1,12 +1,16 @@
 @import "mixins";
+@import "normalize";
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 body {
 	background-color: $green;
 	font-family: $poppins;
@@ -17,49 +21,59 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 .wrap {
 	max-width: 1050px;
 	margin: 0 auto;
 	padding: 100px 25px;
 }
+
 .clearfix:after { /* We need this to clear our floats */
 	content: "";
 	display: table;
 	clear: both;
 }
+
 a {
 	color: $white;
 	text-decoration: none;
 	border-bottom: 1px dotted $white;
 	opacity: 1;
 	transition: all 0.3s ease;
+
 	&:hover, &:active, &:focus {
 		opacity: 0.85;
 	}
 }
+
 .link {
 	position: absolute;
 	top: 10px;
 	left: 10px;
 	text-transform: uppercase;
 	font-size: 0.9em;
-	&:before {
+
+	&::before {
 		content: "←";
 		color: $white;
 		margin-right: 5px;
 	}
 }
+
 h1 {
 	font-size: 3em;
 	font-weight: 300;
 }
+
 h2 {
 	font-size: 2.5em;
 	font-weight: 300;
 }
+
 ul {
 	margin: 0;
 	padding: 0;
+
 	li {
 		list-style-type: none;
 		display: block;
@@ -67,6 +81,7 @@ ul {
 		float: left;
 	}
 }
+
 .days-of-week {
 	li {
 		text-align: center;
@@ -76,14 +91,17 @@ ul {
 		border-top: 1px solid $white;
 		border-right: 1px solid $green;
 		border-bottom: 1px solid $white;
+
 		&:first-child {
 			border-left: 1px solid $white;
 		}
+
 		&:last-child {
 			border-right: 1px solid $white;
 		}
 	}
 }
+
 .days-of-month {
 	li {
 		position: relative; /* We need this to position the spans and dates */
@@ -93,13 +111,16 @@ ul {
 		border-top: none;
 		border-right: 1px solid $white;
 		border-bottom: 1px solid $white;
+
 		&:nth-of-type(1) {
 			border-left: 1px solid $white;
 		}
+
 		&:nth-of-type(7n+8) { /* Clear the first day of each row */
 			border-left: 1px solid $white;
 			clear: both;
 		}
+
 		span {
 			position: absolute;
 			top: 5px;
@@ -108,15 +129,18 @@ ul {
 		}
 	}
 }
+
 @media only screen and (max-width: 960px) {
 	.wrap {
 		padding: 25px;
 	}
+
 	.days-of-week {
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
+
 	.days-of-month {
 		li {
 			display: block;
@@ -128,16 +152,20 @@ ul {
 			border-top: none;
 			border-left: none;
 			border-right: none;
+
 			&:empty { /* hide the empty days = li without a span */
 				display: none;
 			}
+
 			&:nth-of-type(1) {
 				border-left: none;
 			}
+
 			&:nth-of-type(7n+8) {
 				border-left: none;
 				clear: both;
 			}
+
 			span {
 				position: static;
 				display: inline-block;
