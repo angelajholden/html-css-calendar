@@ -125,7 +125,7 @@ ul {
 			border-left: none;
 			border-right: none;
 
-			&:empty { /* hide the empty days = li without a span */
+			&:empty { /* hide the empty days = li without a span or text */
 				display: none;
 			}
 
